@@ -28,10 +28,10 @@ class TagField(CharField):
         setattr(cls, self.name, self)
 
         # Save tags back to the database post-save
-        signals.post_save.connect(self._save, cls, True)
+        #signals.post_save.connect(self._save, cls, True)
 
         # Update tags from Tag objects post-init
-        signals.post_init.connect(self._update, cls, True)
+        #signals.post_init.connect(self._update, cls, True)
 
     def __get__(self, instance, owner=None):
         """
